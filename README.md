@@ -10,6 +10,33 @@ Um arquivo foi "processado", aquele que contém o banco de dados de Cleveland. T
 
 Para ver os Custos dos Testes (doados por Peter Turney), consulte a pasta "Custos". <sup>1</sup>
 
+## Definição do Problema
 
+...
+
+## Informações sobre os atributos
+
+...
+
+## Download dos dados
+
+...
+
+## Análise Exploratória dos Dados
+
+...
+
+### Estatísticas descritivas
+
+...
+
+### Visualizações
+...
+
+#### Visualizações Unimodais
+...
+
+#### Visualizações Multimodais
+...
 
 1. Tradução livre do README.md original, disponível em: https://archive-beta.ics.uci.edu/ml/datasets/Heart+Disease
