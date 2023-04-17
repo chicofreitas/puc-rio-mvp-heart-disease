@@ -15,8 +15,27 @@ Um arquivo foi "processado", aquele que contém o banco de dados de Cleveland. T
 Para ver os Custos dos Testes (doados por Peter Turney), consulte a pasta "Custos". <sup>1</sup>
 
 ## Informações sobre os atributos
+        -- Only 14 used
+            -- 1. #3  (age)       
+            -- 2. #4  (sex)       
+            -- 3. #9  (cp)        
+            -- 4. #10 (trestbps)  
+            -- 5. #12 (chol)      
+            -- 6. #16 (fbs)       
+            -- 7. #19 (restecg)   
+            -- 8. #32 (thalach)   
+            -- 9. #38 (exang)     
+            -- 10. #40 (oldpeak)   
+            -- 11. #41 (slope)     
+            -- 12. #44 (ca)        
+            -- 13. #51 (thal)      
+            -- 14. #58 (num)       (the predicted attribute)
 
-...
+
+        num: diagnosis of heart disease (angiographic disease status)
+        -- Value 0: < 50% diameter narrowing
+        -- Value 1: > 50% diameter narrowing
+        (in any major vessel: attributes 59 through 68 are vessels)
 
 ## Download dos dados
 
@@ -90,6 +109,24 @@ Visualizando as 5 últimas linhas do arquivo *heart-disease.csv*:
         901  4074.0  0  66.0  0.0  1.0  1.0  1.0  -9.0  4.0  155.0  0.0  0.0  -9.0  -9.0  -9.0  ...  1.0  1.0  1.0  1.0  1.0  2.0  1.0  1.0  1.0  1.0  1.0  1.0  70.0  -9.0   name
 
         [5 rows x 76 columns]
+
+Verificando o tipo de dataset de cada atributo:
+
+        $ heart_disease.dtypes
+
+        id         object
+        ccf        object
+        age        object
+        sex        object
+        painloc    object
+                    ...  
+        lvx4       object
+        lvf        object
+        cathef     object
+        junk       object
+        name       object
+        Length: 76, dtype: object
+
 
 Resumo estatístico 
 

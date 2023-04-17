@@ -80,4 +80,4 @@ labels_attributes = [
     ]
 heart_disease = pd.read_csv('resources/datasets/heart-disease/csv/heart-disease.csv', names=labels_attributes)
 
-print(heart_disease.columns)
+print(heart_disease.dtypes)
