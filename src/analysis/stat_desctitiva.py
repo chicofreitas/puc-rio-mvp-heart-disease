@@ -1,10 +1,5 @@
 import pandas as pd
 
-cleveland_dataset = 'resources/datasets/heart-disease/csv/cleveland.csv'
-hungarian_dataset = 'resources/datasets/heart-disease/csv/hungarian.csv'
-long_beach_dataset = 'resources/datasets/heart-disease/csv/long-beach-va.csv'
-switzerland_dataset = 'resources/datasets/heart-disease/csv/switzerland.csv'
-
 labels_attributes = [
     'id',
     'ccf',
@@ -83,14 +78,6 @@ labels_attributes = [
     'junk',
     'name'
     ]
+heart_disease = pd.read_csv('resources/datasets/heart-disease/csv/heart-disease.csv', names=labels_attributes)
 
-hd_cleveland = pd.read_csv(cleveland_dataset, names=labels_attributes, nrows=282)
-hd_hungarian = pd.read_csv(hungarian_dataset, names=labels_attributes)
-hd_long_beach = pd.read_csv(long_beach_dataset, names=labels_attributes)
-hd_switzerland = pd.read_csv(switzerland_dataset, names=labels_attributes)
-
-data_frames = [hd_cleveland, hd_hungarian, hd_long_beach, hd_switzerland]
-
-data_frame = pd.concat(data_frames)
-
-data_frame.to_csv('resources/datasets/heart-disease/csv/heart-disease.csv', index=False)
+print(heart_disease.info())
