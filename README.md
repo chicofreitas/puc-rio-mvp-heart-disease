@@ -12,7 +12,16 @@ Os nomes e números de segurança social dos pacientes foram recentemente removi
 
 Um arquivo foi "processado", aquele que contém o banco de dados de Cleveland. Todos os quatro arquivos não processados também existem neste diretório.
 
-Para ver os Custos dos Testes (doados por Peter Turney), consulte a pasta "Custos". <sup>1</sup>
+Para ver os Custos dos Testes (doados por Peter Turney), consulte a pasta "Custos".
+
+This database contains 76 attributes, but all published experiments refer to using a subset of 14 of them.  In particular, the Cleveland database is the only one that has been used by ML researchers to this date.  The "goal" field refers to the presence of heart disease in the patient.  It is integer valued from 0 (no presence) to 4. Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).  
+
+The names and social security numbers of the patients were recently removed from the database, replaced with dummy values.
+One file has been "processed", that one containing the Cleveland database. All four unprocessed files also exist in this directory. <sup>1</sup>
+
+### O que eu pretendo fazer com os dados?
+
+Ao invés de utilizar apenas o dataset de Cleveland, pretendo concatenar os quatro datasets para futuramente treinar e testar um modelo de Machine Learning nos bias (0, 1, 2, 3 e 4) para a identificação de presença de doença cardíaca.
 
 ## Informações sobre os atributos
         -- Only 14 used
@@ -194,6 +203,16 @@ Visualizando as colunas do dataset
             'name'],
             dtype='object')
 
+Finalmente, analisar a distribuição de **num**
+
+        num
+        0.0    404
+        1.0    191
+        2.0    130
+        3.0    132
+        4.0     42
+        num      1
+        dtype: int64
 
 ### Visualizações
 ...
