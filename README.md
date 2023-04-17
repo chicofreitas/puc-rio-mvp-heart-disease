@@ -1,6 +1,10 @@
 # MVP Sprint I - Heart Disease
 
-Fonte dos dados: [ UC Irvine Machine Learning Repository - Heart Disease ]( https://archive-beta.ics.uci.edu/dataset/45/heart+disease )
+## Francisco das Chagas Alves Freitas
+
+**Fonte dos dados:** [ UC Irvine Machine Learning Repository - Heart Disease ]( https://archive-beta.ics.uci.edu/dataset/45/heart+disease )
+
+## Definição do Problema
 
 Este banco de dados contém 76 atributos, mas todos os experimentos publicados referem-se ao uso de um subconjunto de 14 deles. Em particular, o banco de dados de Cleveland é o único que foi usado por pesquisadores de ML até hoje. O campo "objetivo" refere-se à presença de cardiopatia no paciente. É um valor inteiro de 0 (sem presença) a 4. Os experimentos com o banco de dados Cleveland se concentraram em simplesmente tentar distinguir a presença (valores 1,2,3,4) da ausência (valor 0).
    
@@ -10,17 +14,108 @@ Um arquivo foi "processado", aquele que contém o banco de dados de Cleveland. T
 
 Para ver os Custos dos Testes (doados por Peter Turney), consulte a pasta "Custos". <sup>1</sup>
 
-## Definição do Problema
-
-...
-
 ## Informações sobre os atributos
 
 ...
 
 ## Download dos dados
 
-...
+        import pandas as pd
+
+        cleveland_dataset = 'resources/datasets/heart-disease/csv/cleveland.csv'
+        hungarian_dataset = 'resources/datasets/heart-disease/csv/hungarian.csv'
+        long_beach_dataset = 'resources/datasets/heart-disease/csv/long-beach-va.csv'
+        switzerland_dataset = 'resources/datasets/heart-disease/csv/switzerland.csv'
+
+        labels_attributes = [
+            'id',
+            'ccf',
+            'age',
+            'sex',
+            'painloc',
+            'painexer',
+            'relrest',
+            'pncaden',
+            'cp',
+            'trestbps',
+            'htn',
+            'chol',
+            'smoke',
+            'cigs',
+            'years',
+            'fbs',
+            'dm',
+            'famhist',
+            'restecg',
+            'ekgmo',
+            'ekgday',
+            'ekgyr',
+            'dig',
+            'prop',
+            'nitr',
+            'pro',
+            'diuretic',
+            'proto',
+            'thaldur',
+            'thaltime', 
+            'met',
+            'thalach',
+            'thalrest',
+            'tpeakbps',
+            'tpeakbpd',
+            'dummy',
+            'trestbpd',
+            'exang',
+            'xhypo',
+            'oldpeak',
+            'slope',
+            'rldv5',
+            'rldv5e',
+            'ca',
+            'restckm',
+            'exerckm',
+            'restef',
+            'restwm',
+            'exeref',
+            'exerwm',
+            'thal',
+            'thalsev',
+            'thalpul',
+            'earlobe',
+            'cmo',
+            'cday',
+            'cyr',
+            'num',
+            'lmt',
+            'ladprox',
+            'laddist',
+            'diag',
+            'cxmain',
+            'ramus',
+            'om1',
+            'om2',
+            'rcaprox',
+            'rcadist',
+            'lvx1',
+            'lvx2',
+            'lvx3',
+            'lvx4',
+            'lvf',
+            'cathef',
+            'junk',
+            'name'
+            ]
+
+        hd_cleveland = pd.read_csv(cleveland_dataset, names=labels_attributes, nrows=282)
+        hd_hungarian = pd.read_csv(hungarian_dataset, names=labels_attributes)
+        hd_long_beach = pd.read_csv(long_beach_dataset, names=labels_attributes)
+        hd_switzerland = pd.read_csv(switzerland_dataset, names=labels_attributes)
+
+        data_frames = [hd_cleveland, hd_hungarian, hd_long_beach, hd_switzerland]
+
+        data_frame = pd.concat(data_frames)
+
+        data_frame.to_csv('resources/datasets/heart-disease/csv/heart-disease.csv', index=False)
 
 ## Análise Exploratória dos Dados
 
@@ -104,6 +199,21 @@ Informaçõse sobre o dataset
 
 
 Visualizando as colunas do dataset
+
+        $ heart_disease.columns
+
+        Index(['id', 'ccf', 'age', 'sex', 'painloc', 'painexer', 'relrest', 'pncaden',
+            'cp', 'trestbps', 'htn', 'chol', 'smoke', 'cigs', 'years', 'fbs', 'dm',
+            'famhist', 'restecg', 'ekgmo', 'ekgday', 'ekgyr', 'dig', 'prop', 'nitr',
+            'pro', 'diuretic', 'proto', 'thaldur', 'thaltime', 'met', 'thalach',
+            'thalrest', 'tpeakbps', 'tpeakbpd', 'dummy', 'trestbpd', 'exang',
+            'xhypo', 'oldpeak', 'slope', 'rldv5', 'rldv5e', 'ca', 'restckm',
+            'exerckm', 'restef', 'restwm', 'exeref', 'exerwm', 'thal', 'thalsev',
+            'thalpul', 'earlobe', 'cmo', 'cday', 'cyr', 'num', 'lmt', 'ladprox',
+            'laddist', 'diag', 'cxmain', 'ramus', 'om1', 'om2', 'rcaprox',
+            'rcadist', 'lvx1', 'lvx2', 'lvx3', 'lvx4', 'lvf', 'cathef', 'junk',
+            'name'],
+            dtype='object')
 
 
 ### Visualizações
