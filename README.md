@@ -39,6 +39,8 @@ Visualizando as 5 primeiras linhas do arquivo *heart-disease.csv*:
         3  3.0    0  67.0  1.0     -9.0      -9.0     -9.0     -9.0  4.0     120.0  1.0  229.0  ...  1.0  -9.0      2.0      2.0   1.0   1.0   1.0   7.0  3.0    -9.0  -9.0   name
         4  4.0    0  37.0  1.0     -9.0      -9.0     -9.0     -9.0  3.0     130.0  0.0  250.0  ...  1.0  -9.0      1.0      1.0   1.0   1.0   1.0   1.0  1.0    -9.0  -9.0   name
 
+        [5 rows x 76 columns]
+
 Visualizando as 5 últimas linhas do arquivo *heart-disease.csv*:
 
         $ heart_disease.tail()
@@ -49,6 +51,60 @@ Visualizando as 5 últimas linhas do arquivo *heart-disease.csv*:
         899  4072.0  0  56.0  1.0  0.0  1.0  1.0  -9.0  3.0  125.0  0.0  0.0  -9.0  -9.0  -9.0  ...  1.0  1.0  2.0  1.0  1.0  1.0  1.0  1.0  1.0  5.0  3.0  2.0  61.0  -9.0   name
         900  4073.0  0  54.0  1.0  1.0  1.0  1.0  -9.0  4.0  130.0  0.0  0.0  -9.0  -9.0  -9.0  ...  1.0  2.0  1.0  1.0  1.0  2.0  1.0  1.0  1.0  1.0  1.0  1.0  -9.0  -9.0   name
         901  4074.0  0  66.0  0.0  1.0  1.0  1.0  -9.0  4.0  155.0  0.0  0.0  -9.0  -9.0  -9.0  ...  1.0  1.0  1.0  1.0  1.0  2.0  1.0  1.0  1.0  1.0  1.0  1.0  70.0  -9.0   name
+
+        [5 rows x 76 columns]
+
+Resumo estatístico 
+
+                0    1     2    3    4    5    6     7    8      9    10   11    12    13  ...   62    63   64    65   66   67   68   69   70   71   72    73    74     75
+        count     900  902   900  900  900  900  900   900  900    900  900  900   900   900  ...  900   900  900   900  900  900  900  900  900  900  900   900   900    900
+        unique    715    4    51    3    4    4    4     2    5     62    4  215     4    27  ...    4     4    4     4    4    4    6    9   10   10    8    90    54      2
+        top     172.0    0  54.0  1.0  1.0  1.0  1.0  -9.0  4.0  120.0  0.0  0.0  -9.0  -9.0  ...  1.0  -9.0  1.0  -9.0  1.0  1.0  1.0  1.0  1.0  1.0  1.0  -9.0  -9.0   name
+        freq        2  494    51  711  568  366  412   899  485    128  453  172   669   420  ...  467   567  517   572  430  521  874  871  843  769  759   588   780    899
+            
+        [4 rows x 76 columns]
+Dimensões do dataset
+
+        $ heart_disease.shape
+
+        (902, 76)
+
+Informaçõse sobre o dataset
+
+        $ heart_disease.info()
+
+        <class 'pandas.core.frame.DataFrame'>
+        RangeIndex: 902 entries, 0 to 901
+        Data columns (total 76 columns):
+        #   Column    Non-Null Count  Dtype 
+        ---  ------    --------------  ----- 
+        0   id        900 non-null    object
+        1   ccf       902 non-null    object
+        2   age       900 non-null    object
+        3   sex       900 non-null    object
+        4   painloc   900 non-null    object
+        5   painexer  900 non-null    object
+
+        ...
+
+        65  om2       900 non-null    object
+        66  rcaprox   900 non-null    object
+        67  rcadist   900 non-null    object
+        68  lvx1      900 non-null    object
+        69  lvx2      900 non-null    object
+        70  lvx3      900 non-null    object
+        71  lvx4      900 non-null    object
+        72  lvf       900 non-null    object
+        73  cathef    900 non-null    object
+        74  junk      900 non-null    object
+        75  name      900 non-null    object
+        dtypes: object(76)
+        memory usage: 535.7+ KB
+        None
+
+
+Visualizando as colunas do dataset
+
 
 ### Visualizações
 ...
