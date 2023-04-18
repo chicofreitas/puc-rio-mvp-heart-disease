@@ -218,7 +218,7 @@ Finalmente, analisar a distribuição de **num**
 
 #### Visualizações Unimodais
 
-![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "Hist Plots")
+![Historygram of the 14 attribures](https://github.com/chicofreitas/puc-rio-mvp-heart-disease/blob/main/build/unimodais01.png "Hist Plots")
 
 #### Visualizações Multimodais
 ...
