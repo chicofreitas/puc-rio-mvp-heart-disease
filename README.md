@@ -215,10 +215,10 @@ Finalmente, analisar a distribuição de **num**
         dtype: int64
 
 ### Visualizações
-...
 
 #### Visualizações Unimodais
-...
+
+![Alt text](https://assets.digitalocean.com/articles/alligator/boo.svg "Hist Plots")
 
 #### Visualizações Multimodais
 ...
