@@ -80,4 +80,4 @@ labels_attributes = [
     ]
 heart_disease = pd.read_csv('resources/datasets/heart-disease/csv/heart-disease.csv', names=labels_attributes)
 
-print(heart_disease.groupby('num').size())
+print(heart_disease[heart_disease['age'] != "age"])
